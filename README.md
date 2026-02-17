@@ -1,1 +1,0 @@
-Algo strategies using ai
