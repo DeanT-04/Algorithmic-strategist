@@ -1,7 +1,68 @@
 [project]
-name = "python-template"
+name = "algorithmic-strategist"
 version = "0.1.0"
-description = "Add your description here"
+description = "Algorithmic trading strategy research, backtesting, and analysis toolkit."
 readme = "README.md"
+license = "MIT"
 requires-python = ">=3.12"
-dependencies = []
+authors = [{ name = "Dean T" }]
+keywords = ["algorithmic-trading", "backtesting", "quantitative-finance"]
+
+dependencies = [
+    "backtesting>=0.6.5",
+    "dukascopy-python>=4.0.1",
+    "pyarrow>=23.0.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=6.0",
+    "ruff>=0.9",
+    "mypy>=1.14",
+]
+
+# ── Entry point ──────────────────────────────────────────────────────────
+[project.scripts]
+strategist = "algorithmic_strategist.main:main"
+pull-data = "algorithmic_strategist.pulling_historical_data:main"
+
+# ── Build system ─────────────────────────────────────────────────────────
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+# ── Ruff – linter & formatter ───────────────────────────────────────────
+[tool.ruff]
+target-version = "py312"
+line-length = 99
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # pyflakes
+    "I",    # isort
+    "N",    # pep8-naming
+    "UP",   # pyupgrade
+    "B",    # flake8-bugbear
+    "SIM",  # flake8-simplify
+    "RUF",  # ruff-specific rules
+]
+ignore = ["E501"]  # line length handled by formatter
+
+[tool.ruff.lint.isort]
+known-first-party = ["algorithmic_strategist"]
+
+# ── Pytest ───────────────────────────────────────────────────────────────
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --strict-markers --tb=short"
+
+# ── Mypy ─────────────────────────────────────────────────────────────────
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_return_any = true
+warn_unused_configs = true

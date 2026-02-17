@@ -1,18 +1,48 @@
-```
-# Logs and temp files
-*.log
-*.tmp
-*.swp
+# ── Python ───────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
 
-# Environment
+# ── Virtual environments ────────────────────────────────────────────────
+.venv/
+venv/
+ENV/
+
+# ── Environment variables ───────────────────────────────────────────────
 .env
 .env.local
-.env.
+.env.*
 
-# Editors
+# ── IDE / Editors ───────────────────────────────────────────────────────
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
 
-# Original rules preserved
+# ── Testing & Coverage ─────────────────────────────────────────────────
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ── Reports (generated output) ──────────────────────────────────────────
+reports/
+
+# ── OS artifacts ────────────────────────────────────────────────────────
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# ── Data (large files, downloaded on demand) ────────────────────────────
+historical_data/
+
+# ── Logs & temp ─────────────────────────────────────────────────────────
 *.log
-```
+*.tmp
