@@ -1,0 +1,52 @@
+{
+  "symbols": [
+    {
+      "instrument": "EUR/USD",
+      "label": "EURUSD"
+    },
+    {
+      "instrument": "GBP/USD",
+      "label": "GBPUSD"
+    },
+    {
+      "instrument": "USD/JPY",
+      "label": "USDJPY"
+    },
+    {
+      "instrument": "USD/CHF",
+      "label": "USDCHF"
+    },
+    {
+      "instrument": "AUD/USD",
+      "label": "AUDUSD"
+    },
+    {
+      "instrument": "NZD/USD",
+      "label": "NZDUSD"
+    },
+    {
+      "instrument": "USD/CAD",
+      "label": "USDCAD"
+    },
+    {
+      "instrument": "EUR/GBP",
+      "label": "EURGBP"
+    },
+    {
+      "instrument": "EUR/JPY",
+      "label": "EURJPY"
+    },
+    {
+      "instrument": "GBP/JPY",
+      "label": "GBPJPY"
+    },
+    {
+      "instrument": "XAU/USD",
+      "label": "XAUUSD"
+    },
+    {
+      "instrument": "XAG/USD",
+      "label": "XAGUSD"
+    }
+  ]
+}
